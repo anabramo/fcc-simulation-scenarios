@@ -1,0 +1,65 @@
+######################################
+#########      Families      #########
+######################################
+# Momentum cleaning   
+NSIG_FAM tcpmom                 18.500000 PRIMARY
+NSIG_FAM tcsmom                 21.500000 SECONDARY
+#
+# Betatron cleaning 
+NSIG_FAM tcphbet                11.000000 PRIMARY
+NSIG_FAM tcpvbet                65.000000 PRIMARY
+NSIG_FAM tcshbet                13.000000 SECONDARY
+NSIG_FAM tcsvbet                75.500000 SECONDARY
+#
+# Synctrotron radiation
+NSIG_FAM tcrc2v                 85.33167  SYNCHROTRON
+NSIG_FAM tcrc2h                 13.05585  SYNCHROTRON
+NSIG_FAM tcrc0v                 83.35686  SYNCHROTRON
+NSIG_FAM tcrc0h                 12.95812  SYNCHROTRON
+NSIG_FAM tcrc3                  13.44071  SYNCHROTRON
+NSIG_FAM tcrwl                  14.01184  SYNCHROTRON
+#
+# Collimators
+# name                                                opening/fam mat.     length[m]    angle[deg]     offset[m]    
+tcp.h.b1                                                  tcphbet MoGR      0.250000      0.000000      0.000000   
+tcp.v.b1                                                  tcpvbet MoGR      0.250000     90.000000      0.000000   
+tcs.h1.b1                                                 tcshbet Mo        0.300000      0.000000      0.000000
+tcs.v1.b1                                                 tcsvbet Mo        0.300000     90.000000      0.000000
+tcs.h2.b1                                                 tcshbet Mo        0.300000      0.000000      0.000000
+tcs.v2.b1                                                 tcsvbet Mo        0.300000     90.000000      0.000000
+tcp.hp.b1                                                  tcpmom MoGR      0.250000      0.000000      0.000000   
+tcs.hp1.b1                                                 tcsmom Mo        0.300000      0.000000      0.000000   
+tcs.hp2.b1                                                 tcsmom Mo        0.300000      0.000000      0.000000   
+#
+tcr.h.wl.2.b1                                               tcrwl Iner      0.100000      0.000000      0.000000
+tcr.h.c3.2.b1                                               tcrc3 Iner      0.100000      0.000000      0.000000
+tcr.v.c0.2.b1                                              tcrc0v Iner      0.100000     90.000000      0.000000
+tcr.h.c0.2.b1                                              tcrc0h Iner      0.100000      0.000000      0.000000
+tcr.v.c2.2.b1                                              tcrc2v Iner      0.100000     90.000000      0.000000
+tcr.h.c2.2.b1                                              tcrc2h Iner      0.100000      0.000000      0.000000
+#
+tcr.h.wl.3.b1                                               tcrwl Iner      0.100000      0.000000      0.000000
+tcr.h.c3.3.b1                                               tcrc3 Iner      0.100000      0.000000      0.000000
+tcr.v.c0.3.b1                                              tcrc0v Iner      0.100000     90.000000      0.000000
+tcr.h.c0.3.b1                                              tcrc0h Iner      0.100000      0.000000      0.000000
+tcr.v.c2.3.b1                                              tcrc2v Iner      0.100000     90.000000      0.000000
+tcr.h.c2.3.b1                                              tcrc2h Iner      0.100000      0.000000      0.000000
+#
+tcr.h.wl.4.b1                                               tcrwl Iner      0.100000      0.000000      0.000000
+tcr.h.c3.4.b1                                               tcrc3 Iner      0.100000      0.000000      0.000000
+tcr.v.c0.4.b1                                              tcrc0v Iner      0.100000     90.000000      0.000000
+tcr.h.c0.4.b1                                              tcrc0h Iner      0.100000      0.000000      0.000000
+tcr.v.c2.4.b1                                              tcrc2v Iner      0.100000     90.000000      0.000000
+tcr.h.c2.4.b1                                              tcrc2h Iner      0.100000      0.000000      0.000000
+#
+tcr.h.wl.1.b1                                               tcrwl Iner      0.100000      0.000000      0.000000
+tcr.h.c3.1.b1                                               tcrc3 Iner      0.100000      0.000000      0.000000
+tcr.v.c0.1.b1                                              tcrc0v Iner      0.100000     90.000000      0.000000
+tcr.h.c0.1.b1                                              tcrc0h Iner      0.100000      0.000000      0.000000
+tcr.v.c2.1.b1                                              tcrc2v Iner      0.100000     90.000000      0.000000
+tcr.h.c2.1.b1                                              tcrc2h Iner      0.100000      0.000000      0.000000
+#
+# Additional Collimator Settings
+SETTINGS
+# The horizontal TCP is tilted by 45.68 urad to match the beam divergence
+# TILTED   tcp.h.b1 0.00261 -0.00261

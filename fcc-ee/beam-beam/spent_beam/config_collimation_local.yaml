@@ -1,0 +1,77 @@
+input:
+  machine: fccee
+  xtrack_line: FCCee-z-collv3-sr-line.json
+  collimator_file: CollDB_FCCee_sr_z_b1.dat
+  bdsim_config: settings.gmad
+  material_rename_map:
+    C: AC150GPH
+    MoGR: MG6403Fc
+    CU: Cu
+    CuCD: CUDIAM75
+    Iner: INERM180
+
+beambeam:
+  - 
+    at_element: 'ip.1'
+    bunch_intensity: 2.14e11
+    sigma_z: 15.5e-3
+    crossing_angle: 15e-3
+    other_beam_q0: -1
+    n_slices: 300
+  -
+    at_element: 'ip.2'
+    bunch_intensity: 2.14e11
+    sigma_z: 15.5e-3
+    crossing_angle: 15e-3
+    other_beam_q0: -1
+    n_slices: 300
+  -
+    at_element: 'ip.4'
+    bunch_intensity: 2.14e11
+    sigma_z: 15.5e-3
+    crossing_angle: 15e-3
+    other_beam_q0: -1
+    n_slices: 300
+  -
+    at_element: 'ip.6'
+    bunch_intensity: 2.14e11
+    sigma_z: 15.5e-3
+    crossing_angle: 15e-3
+    other_beam_q0: -1
+    n_slices: 300
+
+beam:
+  particle: positron
+  momentum: 45600000000.0
+  emittance:
+    x: 6.335825151891213e-05
+    y: 1.6955025054356766e-07
+
+dist:
+  start_element: 'ip.1'
+  source: 'internal'
+  parameters: 
+      type: 'matched_beam'
+      sigma_z: 15.5e-3
+
+run:
+  radiation: 'quantum'
+  beamstrahlung: 'quantum'
+  bhabha: 'quantum'
+  compensate_sr_energy_loss: true
+  sr_compensation_delta: 0.00010846461433849656
+  energy_cut: 0.165
+  batch_mode: true
+  seed: 1993
+  turns: 2
+  nparticles: 1e6
+  outputfile: Outputdata/part.hdf
+  aperture_interp: 0.03
+  max_particles: 2e6
+  turn_rf_off: false
+
+lossmap:
+  make_lossmap: true
+  weights: energy
+  norm: total
+  aperture_binwidth: 0.1
